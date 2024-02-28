@@ -1,0 +1,38 @@
+import random
+
+player_input = input("Please enter your choice (rock, paper, scissors):")
+
+possible_inputs = ["rock", "paper", "scissors"]
+computer_input = random.choice(possible_inputs)
+
+if player_input not in possible_inputs:
+     print ("Error: Incorrect choice entered ! Please enter the correct choice")
+
+def winner(player_input, computer_input):
+    if player_input == computer_input:
+        print ("Both players selected same choice; please try again")
+        
+    elif player_input == "rock":
+        if computer_input == "scissors":
+            print ("You won")
+        else:
+            print ("You lost")
+            
+    elif player_input == "paper":
+        if computer_input == "rock":
+            print ("You won")
+        else:
+            print ("You lost")
+            
+    elif player_input == "scissors":
+        if computer_input == "paper":
+            print ("You won")
+        else:
+            print ("You lost")
+    else:
+        print("computer wins")
+                
+print(player_input)
+print(computer_input)   
+winner(player_input, computer_input)
+    
